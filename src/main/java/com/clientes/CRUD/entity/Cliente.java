@@ -1,7 +1,11 @@
 package com.clientes.CRUD.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import java.util.List;
 
 /**
  *
@@ -19,6 +23,9 @@ public class Cliente {
     private String direccion;
     private String telefono;
 
+     @JsonManagedReference
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Mascota> mascotas;
     //Constructores
     public Cliente(Long idCliente, String nombre, String ciudad, String direccion, String telefono) {
         this.idCliente = idCliente;
@@ -74,6 +81,15 @@ public class Cliente {
         this.telefono = telefono;
     }
 
+    public List<Mascota> getMascotas() {
+        return mascotas;
+    }
+
+    public void setMascotas(List<Mascota> mascotas) {
+        this.mascotas = mascotas;
+    }
+
+    
     @Override
     public String toString() {
         return "Cliente{" + "idCliente=" + idCliente + ", nombre=" + nombre + ", ciudad=" + ciudad + ", direccion=" + direccion + ", telefono=" + telefono + '}';
