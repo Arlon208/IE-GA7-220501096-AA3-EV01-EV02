@@ -4,13 +4,16 @@
  */
 package com.clientes.CRUD.controller;
 
+import com.clientes.CRUD.dto.CitaRequestDTO;
 import com.clientes.CRUD.entity.Cita;
 import com.clientes.CRUD.exceptions.ResourceNotFoundException;
 import com.clientes.CRUD.repository.CitaRepository;
+import com.clientes.crud.service.CitaService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +34,9 @@ public class CitaController {
     //Llamador al repository
     @Autowired
     CitaRepository repo;
+    
+    @Autowired
+    private CitaService citaService;
     
     //Obtener Citas
     @GetMapping("/citas")
@@ -53,6 +59,21 @@ public class CitaController {
     public void createCita(@RequestBody Cita cita){
         repo.save(cita);
     }
+    
+    //Agendar cita, este metodo busca crear la cita y asignarla
+        @PostMapping("/cita/agendar")
+    public ResponseEntity<String> agendarCita(@RequestBody CitaRequestDTO citaRequest) {
+        try {
+            // Creacion de cita y agendamiento con ayuda del servicio
+            citaService.guardarCitaYAsignacion(citaRequest);
+            return ResponseEntity.ok("Cita agendada y asignación creada.");
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(409).body(e.getMessage()); // 409 Conflict for business logic errors
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Error interno al agendar la cita.");
+        }
+    }
+    
     //Modificar Cita
     @PutMapping("/cita/update/{id}")
     public Cita updateCita(@PathVariable Integer id,@RequestBody Cita citaActualizada){
