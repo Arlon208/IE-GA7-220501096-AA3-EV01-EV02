@@ -24,14 +24,14 @@ El proyecto se construyó con las siguientes tecnologías y dependencias clave:
 
 ## 🛠️ Configuración e Instalación
 
-1.  **Clonar el Repositorio**:
+1.   **Clonar el Repositorio**:
     ```bash
-    git clone [(https://github.com/Arlon208/IE-GA7-220501096-AA3-EV01-EV02.git)]
+    git clone [https://github.com/Arlon208/IE-GA7-220501096-AA3-EV01-EV02.git](https://github.com/Arlon208/IE-GA7-220501096-AA3-EV01-EV02.git)
     ```
 
 2.  **Configuración de la Base de Datos**:
     * Asegúrate de tener un servidor MySQL local en funcionamiento.
-    * Importa el archivo `cliente.sql` que se encuentra en el directorio raíz del proyecto a tu instancia de MySQL. Este script creará las tablas necesarias y las llenará con datos de ejemplo.
+    * Importa las tablas en la carpeta animalcenter que se encuentra en el directorio raíz del proyecto a tu instancia de MySQL.
 
 3.  **Ejecutar la Aplicación**:
     * Abre el proyecto en un IDE de Java como NetBeans o IntelliJ IDEA.
@@ -49,7 +49,7 @@ Puedes probar los endpoints de la API usando una herramienta como [Postman](http
 | :--- | :--- | :--- | :--- |
 | `POST` | `/cliente/add` | **Añade un nuevo cliente.** | `{"idCliente": 1111111,"nombre": "Roberto","ciudad": "Cartagena","direccion": "Calle 8c","telefono": "321888795"}` |
 | `GET` | `/clientes` | **Lista todos los clientes.** | |
-| `PUT` | `/cliente/update/{id}` | **Actualiza un cliente por ID.** | `{"nombre": "Nuevo Nombre", "telefono": "123456789"}` |
+| `PUT` | `/cliente/update/{id}` | **Actualiza un cliente por ID.** | `{"nombre": "Marcela Rios","direccion": "Manzana 8","telefono": "+57316444787"}` |
 | `GET` | `/clientes/{id}` | **Busca un solo cliente por ID.** | |
 | `DELETE` | `/clientes/{id}` | **Elimina un cliente por ID.** | |
 
@@ -74,7 +74,7 @@ Puedes probar los endpoints de la API usando una herramienta como [Postman](http
 | `POST` | `/hojaclinica/add` | **Añade una nueva hoja clínica.** | `{"motivo": "Fiebre y apatía", "examenes": "Hemograma completo", "medicamentos": "Amoxicilina", "fecha": "2025-09-06", "mascota": {"idMascota": 1}}` |
 | `GET` | `/hojasclinicas` | **Lista todas las hojas clínicas.** | |
 | `GET` | `/hojaclinica/{id}` | **Busca una sola hoja por ID.** | |
-| `PUT` | `/hojaclinica/update/{id}` | **Actualiza una hoja clínica por ID.** | `{"motivo": "Sin cambios", "examenes": "Pendiente"}` |
+| `PUT` | `/hojaclinica/update/{id}` | **Actualiza una hoja clínica por ID.** | `{"motivo": "Dolor Abdominal", "examenes": "Ecografia"}` |
 | `DELETE` | `/hojaclinica/delete/{id}` | **Elimina una hoja clínica por ID.** | |
 
 ---
@@ -94,7 +94,13 @@ Puedes probar los endpoints de la API usando una herramienta como [Postman](http
 
 | Método | Endpoint | Descripción | Ejemplo de JSON |
 | :--- | :--- | :--- | :--- |
-| `POST` | `/cita/add` | **Creacion de cita.** | `{  "fecha": "2024-11-11", "hora": "15:30:00", "tipoCita": "Peluqueria"}` |
-| `GET` | `/citas` | **Lista todas las citas.** | |
-| `GET` | `/cita/{id}` | **Busca una sola cita por ID.** | |
-| `DELETE` | `/cita/delete/{id}` | **Elimina una cita por ID.** | |
+| `POST` | `/asignacioncita/add` | **Creacion de cita.** | `{ "cita": { "idcita": 2}, "cliente": {"idCliente": 1116269977}, "mascota": {"idMascota": 2}}` |
+| `GET` | `/asignacioncitas` | **Lista todas las asignaciones.** | |
+| `GET` | `/asignacioncita/{id}` | **Busca una sola cita por ID.** | |
+| `DELETE` | `/asignacioncitas/delete/{id}` | **Elimina una cita por ID.** | |
+
+### Front-End del Proyecto
+
+Este proyecto cuenta con un front-end el cual podrás encontrar en el siguiente repositorio:
+[https://github.com/Arlon208/FrontAnimalCenter](https://github.com/Arlon208/FrontAnimalCenter)
+
