@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buscar Cita - Veterinaria</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Buscar citas</h2>
+        <img src="img/veterinaria-logo.png" alt="Logo Veterinaria" width="80">
+    </div>
+
+    <div class="back" onclick="location.href='mCitas.html'">
+        <img src="img/atras.png" alt="volver" width="80">
+    </div>
+
+    <div class="search-form-container">
+        <form id="search-form">
+            <label for="fecha-filtro">Filtrar por Fecha:</label>
+            <input type="date" id="fecha-filtro" name="fecha-filtro">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <div class="results-container">
+        <table id="client-table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Mascota</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="client-table-body">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="js/bCita.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@ import com.clientes.CRUD.dto.CitaRequestDTO;
 import com.clientes.CRUD.entity.Cita;
 import com.clientes.CRUD.exceptions.ResourceNotFoundException;
 import com.clientes.CRUD.repository.CitaRepository;
-import com.clientes.crud.service.CitaService;
+import com.clientes.CRUD.service.CitaService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

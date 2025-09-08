@@ -5,7 +5,9 @@
 package com.clientes.CRUD.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,10 +27,12 @@ public class Mascota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMascota;
-    @JsonBackReference
+    
+   // @JsonBackReference
     @ManyToOne //Relacion de uno a muchos
     @JoinColumn(name = "id_cliente")//Clave foranea del cliente en la mascota
     private Cliente cliente;
+    
     private String nombre;
     private String especie;
     private Integer edad;

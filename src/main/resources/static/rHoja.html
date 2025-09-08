@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hoja Clinica</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+   <div class="header">
+    <h2 >Hoja clinica</h2>
+    <img src="img/veterinaria-logo.png" alt="Logo Veterinaria" width="80">
+  </div>
+
+   <div class="back" onclick="location.href='rMascotas.html'">
+     <img src="img/atras.png" alt="volver" width="80">
+  </div>
+
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="nm">Nombre Mascota</label>
+        <input type="text" id="nm" name="nm">
+      </div>
+
+      <div class="form-group">
+        <label for="sintomas">Sintomas</label>
+        <input type="text" id="sintomas" name="sintomas">
+      </div>
+
+      <div class="form-group">
+        <label for="tratamiento">Tratamiento</label>
+        <input type="text" id="tratamiento" name="tratamiento">
+      </div>
+
+      <div class="form-group">
+        <label for="fc">Fecha de control</label>
+        <input type="date" id="fc" name="fc">
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-guardar" id="enviado">Guardar</button>
+        <button type="button" id="cancelar-btn" class="btn-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+<script src="js/script.js"></script>
+</body>
+</html>

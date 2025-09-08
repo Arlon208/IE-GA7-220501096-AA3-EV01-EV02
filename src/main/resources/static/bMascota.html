@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscar Mascota</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+   <div class="header">
+    <h2 >Buscar mascota</h2>
+    <img src="img/veterinaria-logo.png" alt="Logo Veterinaria" width="80">
+  </div>
+
+   <div class="back" onclick="location.href='mMascotas.html'">
+     <img src="img/atras.png" alt="volver" width="80">
+  </div>
+
+<div class="container">
+        <form id="search-form" class="search-form">
+            <input type="number" id="searchId" placeholder="Ingrese la identificación" required>
+            <button type="submit" class="btn-buscar">🔍</button>
+        </form>
+
+        <div class="results-container">
+            <h3>Mascotas del cliente</h3>
+            <table id="mascotat-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Edad</th>
+                        <th>Genero</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="mascota-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div> 
+    
+    <script src="js/bMascotas.js"></script>
+</body>
+</html>

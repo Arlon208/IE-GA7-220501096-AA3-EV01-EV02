@@ -1,6 +1,9 @@
 package com.clientes.CRUD.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -15,6 +18,7 @@ import java.util.List;
 //Clase cliente entidad principal que nos permite instanciar objetos de tipo cliente
 
 @Entity //Esta anotacion permite indicar que la clase es una entidad a interactuar en la BD
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "idCliente")
 public class Cliente {
     @Id 
     private Long idCliente;
@@ -23,7 +27,8 @@ public class Cliente {
     private String direccion;
     private String telefono;
 
-     @JsonManagedReference
+    //@JsonManagedReference("mascota-cliente")
+     @JsonIgnore
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Mascota> mascotas;
     //Constructores

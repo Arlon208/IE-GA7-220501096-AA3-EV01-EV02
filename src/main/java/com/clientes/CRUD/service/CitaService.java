@@ -1,4 +1,4 @@
-package com.clientes.crud.service;
+package com.clientes.CRUD.service;
 
 
 import com.clientes.CRUD.dto.CitaRequestDTO;

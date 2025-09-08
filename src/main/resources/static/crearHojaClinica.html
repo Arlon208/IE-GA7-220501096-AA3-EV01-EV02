@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creacion Hoja Clinica - Veterinaria</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h2>Registrar Hoja Clinica</h2>
+        <img src="img/veterinaria-logo.png" alt="Logo Veterinaria" width="80">
+    </div>
+
+    <div class="back" onclick="location.href='mClientes.html'">
+        <img src="img/atras.png" alt="volver" width="80">
+    </div>
+
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="idMascota">Mascota: </label>
+                <span id="mascotaDisplay"></span>
+                <input type="hidden" id="idMascota" name="idMascota">
+            </div>
+
+            <div class="form-group">
+                <label for="motivo">Motivo de consulta</label>
+                <input type="text" id="motivo" name="motivo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="examenes ">examenes </label>
+                <input type="text" id="examenes" name="examenes " required>
+            </div>
+
+            <div class="form-group">
+                <label for="medicamentos">medicamentos Recetados</label>
+                <input type="text" id="medicamentos" name="medicamentos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha ">fecha </label>
+                <input type="date" id="fecha " name="fecha " required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-guardar" id="enviado">Guardar</button>
+                <button type="button" id="cancelar-btn" class="btn-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/crearHojaClinica.js"></script>
+</body>
+
+</html>

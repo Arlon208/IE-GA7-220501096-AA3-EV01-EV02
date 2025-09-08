@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de clientes - Veterinaria</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+   <div class="header">
+    <h2 >Registrar cliente</h2>
+    <img src="img/veterinaria-logo.png" alt="Logo Veterinaria" width="80">
+  </div>
+
+   <div class="back" onclick="location.href='mClientes.html'">
+     <img src="img/atras.png" alt="volver" width="80">
+  </div>
+
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="cedula">Cédula</label>
+        <input type="number" id="cedula" name="cedula" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="number" id="telefono" name="telefono" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" id="ciudad" name="ciudad" required>
+      </div>
+
+      <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" required>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-guardar" id="enviado">Guardar</button>
+        <button type="button" id="cancelar-btn" class="btn-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+<script src="js/cliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veterinaria</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+   <body>
+
+  <div class="header">
+    <h1 align="center" >Bienvenido al sistema</h1>
+    <br>
+    <img src="img/veterinaria-logo.png" alt="Logo Veterinaria" width="80">
+  </div>
+
+ 
+
+  <div class="menu-container">
+    <div class="menu-item" id="clientes-btn" onclick="location.href='mClientes.html'">
+      <img src="img/clientes.png" alt="Administración de Clientes">
+    </div>
+
+    <div class="menu-item" id="mascotas-btn" onclick="location.href='mMascotas.html'">
+      <img src="img/mascotas.png" alt="Administración de Mascotas">
+    </div>
+
+    <div class="menu-item" id="citas-btn" onclick="location.href='mCitas.html'">
+      <div class="inner-content">
+        <img src="img/citas.png" alt="Agendar Citas">
+      </div>
+    </div>
+
+  <button class="logout" id="logout-btn" onclick="cerrarSesion()">
+    <img src="img/cerrar.png" alt="Cerrar sesión">
+  </button>
+<script src="js/script.js"></script>
+</body>
+</html>

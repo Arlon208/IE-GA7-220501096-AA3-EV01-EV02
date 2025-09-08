@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hoja Clinica Mascota - Veterinaria</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Buscar cliente</h2>
+        <img src="img/veterinaria-logo.png" alt="Logo Veterinaria" width="80">
+    </div>
+
+    <div class="back" onclick="location.href='mMascotas.html'">
+        <img src="img/atras.png" alt="volver" width="80">
+    </div>
+
+        <div class="results-container">
+            <h3>Información del Cliente</h3>
+            <table id="hoja-table">
+                <thead>
+                    <tr>
+                        <th>Mascota</th>
+                        <th>Motivo</th>
+                        <th>Examenes</th>
+                        <th>Medicamentos</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="hoja-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="js/listadoHojasClinicas.js"></script>
+</body>
+</html>
