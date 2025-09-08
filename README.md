@@ -104,3 +104,32 @@ Puedes probar los endpoints de la API usando una herramienta como [Postman](http
 Este proyecto cuenta con un front-end el cual podrás encontrar en el siguiente repositorio:
 [https://github.com/Arlon208/FrontAnimalCenter](https://github.com/Arlon208/FrontAnimalCenter)
 
+
+---
+### Actualizacion: Se agrego el front-end ya mapeado.
+
+### 🚀 Configuración y Despliegue
+
+Siga estos pasos para configurar y ejecutar la aplicación de forma local:
+
+1.  **Clonar los Repositorios:**
+    ```bash
+    git clone [https://github.com/Arlon208/IE-GA7-220501096-AA3-EV01-EV02.git](https://github.com/Arlon208/IE-GA7-220501096-AA3-EV01-EV02.git)
+    ```
+
+2.  **Configurar la Base de Datos:**
+    * Asegúrese de que el servidor MySQL esté activo.
+    * Cree la base de datos `animalcenter`.
+    * Importe el archivo SQL de su proyecto para crear las tablas y los datos iniciales.
+
+3.  **Empaquetar la Aplicación:**
+    * Navegue al directorio raíz del back-end y ejecute el comando de Maven para generar el archivo JAR ejecutable: `mvn clean package`.
+
+4.  **Ejecutar la Aplicación:**
+    * Ejecute el archivo `.jar` generado en la carpeta `target/` usando el siguiente comando: `java -jar CRUD-0.0.1-SNAPSHOT.jar`.
+    * La aplicación se iniciará en `http://localhost:8080`.
+
+5.  **Acceso al Sistema:**
+    * Abra su navegador web y navegue a la URL `http://localhost:8080` para acceder a la interfaz de usuario del sistema.
+
+---
